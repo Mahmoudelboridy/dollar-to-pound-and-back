@@ -1,0 +1,49 @@
+<html>
+<head>
+<title>jsn24</title>
+<style>
+input{
+width:40%;
+height:40px;
+margin:4px 400px;
+border-radius:4px;
+padding:4px;
+font-size:20pt;
+text-transform:capitalize;
+color:black;
+}
+input:focus{
+background-color:#ffebee;
+transform:scale(1.025);
+}
+h1{
+margin-left:550px
+}
+div{
+margin-top:250px;
+}
+body{
+background-color:#2196f3;
+}
+
+</style>
+</head>
+<body>
+<div>
+<h1>التحويل من جنية لدولار والعكس</h1>
+<input onkeyup="mnr();" placeholder="دولار" type="number" id="dd">
+<br><br>
+<input onkeyup="mnr2();" placeholder="جنية" type="number" id="gg">
+</div>
+<script>
+let d=document.getElementById('dd');
+let g=document.getElementById('gg');
+function mnr() {
+g.value=d.value*19.11;
+}
+function mnr2() {
+d.value=g.value/19.11;
+}
+</script>
+</body>
+</html>
