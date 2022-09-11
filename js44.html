@@ -25,15 +25,29 @@ margin-top:250px;
 body{
 background-color:#2196f3;
 }
-
+button{
+width:100px;
+height:40px;
+position:absolute;
+top:450px;
+left:660px;
+background-color:#90caf9;
+color:black;
+font-size:19pt;
+}
+button:hover{
+background-color:#2196f3;
+letter-spacing:1px;
+}
 </style>
 </head>
 <body>
 <div>
 <h1>التحويل من جنية لدولار والعكس</h1>
-<input onkeyup="mnr();" placeholder="دولار" type="number" id="dd">
-<br><br>
-<input onkeyup="mnr2();" placeholder="جنية" type="number" id="gg">
+<input onkeyup="mnr();" placeholder="دولار" type="number" id="dd" />
+<br/><br/>
+<input onkeyup="mnr2();" placeholder="جنية" type="number" id="gg" />
+<button>clear</button>
 </div>
 <script>
 let d=document.getElementById('dd');
@@ -44,6 +58,11 @@ g.value=d.value*19.11;
 function mnr2() {
 d.value=g.value/19.11;
 }
+function cleardata(){
+d.value='';
+g.value='';
+}
+
 </script>
 </body>
 </html>
